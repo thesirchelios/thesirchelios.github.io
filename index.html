@@ -1,9 +1,25 @@
 <html>
-<script>
-var json = '{"name":"Ascend","port":11774,"hostPlayer":"Omnimon","sprintEnabled":"0","sprintUnlimitedEnabled":"0","VoIP":true,"teams":true,"map":"Last Resort","mapFile":"zanzibar","variant":"Forge","variantType":"forge","status":"InGame","numPlayers":2,"maxPlayers":2,"xnkid":"35716cbe55a92c4e9ee74ff8ac42496d","xnaddr":"1273a7036025a147a59501144ea862fa","players":[{"name":"Omnimon","score":3,"kills":0,"assists":0,"deaths":15,"team":1,"isAlive":true,"uid":"de2c5b2299097935"},{"name":"Flump","score":11,"kills":8,"assists":0,"deaths":7,"team":0,"isAlive":true,"uid":"dc22c83800245210"}],"gameVersion":"1.106708_cert_ms23___release","eldewritoVersion":"0.5.0.2"}',
-    obj = JSON.parse(json);
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
-document.write(obj.count);
+<script>
+
+$.getJSON('http://165.120.240.179:11775', function(data) {
+  document.write(data.name);
+  document.write(data.hostPlayer);
+});
+$.getJSON("http://165.120.240.179:11775", function(person){
+
+    $.each(person, function(key, value){
+        document.write(key+": "+value+"<br />"); 
+
+    });
+
+    document.write(person.status);
+});
+
+$.isArray(getJSON);
+
+
 </script>
 <body>
 
