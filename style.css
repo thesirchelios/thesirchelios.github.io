@@ -1,0 +1,382 @@
+html {
+	background-color: #eee;
+	/*background: url(http://media.gettyimages.com/photos/nicklas-lidstrom-of-the-detroit-red-wings-celebrates-with-the-stanley-picture-id81777519) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;*/
+}
+
+#page-container {
+	width: 100%;
+	height: 100%;
+}
+
+#middle {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
+
+#middle img {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+#champion {
+
+}
+
+#west{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left:0;
+	top: 0;
+	padding: 10px;
+	border: 1px solid red;
+}
+
+
+#east {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px;
+	margin-right: 10px;
+	border: 1px solid blue;
+}
+
+
+
+/*West formating */
+#group-left {
+	height: 150px;
+	width: 150px;
+
+}
+
+/*Brackets*/
+
+/*Round 1 brackets*/
+
+#small-bracket-l {
+	height: 67%;
+	width: 10%;
+	border-top:5px solid #aca9a9;
+	border-right:5px solid #aca9a9;
+	border-bottom:5px solid #aca9a9;
+	position: relative;
+	left: 50%;
+	bottom: 117%;
+
+}
+
+#sb-end-l {
+	height: 5px;
+	width: 22%;
+	border-top: 5px solid #aca9a9;
+	position: relative;
+	left:63%;
+	bottom:157%;
+}
+
+/*Round 2 brackets*/
+#medium-bracket-l {
+	height: 146%;
+	width: 22%;
+	border-right:5px solid #aca9a9;
+	border-top:5px solid #aca9a9;
+	border-bottom:5px solid #aca9a9;
+	position: relative;
+	left: 135%;
+	bottom: 383%;
+}
+
+#mb-end-l {
+	height: 5px;
+	width: 62%;
+	border-top: 5px solid #aca9a9;
+	position: relative;
+	left:160%;
+	bottom:465%;
+}
+
+/*Round 3 brackets*/
+
+#large-bracket-l {
+	height: 329%;
+	width: 62%;
+	border-right:5px solid #aca9a9;
+	border-top:5px solid #aca9a9;
+	border-bottom:5px solid #aca9a9;
+	position: relative;
+	left: 272%;
+	bottom: 803%;
+}
+
+#lb-end-l {
+	height: 5px;
+	width: 102%;
+	border-top: 5px solid #aca9a9;
+	position: relative;
+	left:335%;
+	bottom:975%;
+}
+
+
+/*Team logo circle*/
+#all-l {
+	width: 50%;
+	height: 50%;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+
+/*Margin between teams*/
+.top-l {
+	margin-bottom: 30px;
+}
+
+
+#circle-container-l, 
+#logo-l {
+	width:100%;
+	height:100%;
+	position: absolute;
+	}
+
+  .quarter{width:50%;height:50%}
+
+    .top-left{border-top-left-radius:250px;background:#aca9a9;float:left}
+
+    .top-right{border-top-right-radius:250px;background:#aca9a9;float:right}
+
+    .bottom-left{border-bottom-left-radius:250px;background:#aca9a9;float:left}
+
+    .bottom-right{border-bottom-right-radius:250px;background:#aca9a9;float:right}
+
+#logo-l {
+	width: 70%;
+	height: 70%;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+
+#logo-l img {
+	z-index: 10;
+	max-width:100%;
+	max-height:100%;
+	display: block;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+
+
+/*Round 2 circle positions*/
+
+.r2-l {
+	position: relative;
+	left:85%;
+	bottom: 187%;
+	z-index: 1;
+}
+
+/*Round 3 circle positions*/
+
+.r3-l {
+	position: relative;
+	left: 222%;
+	bottom: 187%;
+}
+
+/*Round 4 circle positions*/
+
+.r4-l {
+	position: relative;
+	left: 437%;
+	bottom: 425%;
+}
+
+/* Team colors */
+
+/*West*/
+#stars {
+	background: #006A4E;
+}
+
+#wild {
+	background: #BF2B37;
+}
+
+#blues {
+	background: #0546A0;
+}
+
+#hawks {
+	background: #E3263A;
+}
+
+#ducks {
+	background: #EF5225;
+}
+
+#predators {
+	background: #FDBB2F;
+}
+
+#kings {
+	background: #000000;
+}
+
+#sharks {
+	background: #05535D;
+}
+
+/*East*/
+#caps {
+	background: #CF132B;
+}
+
+#flyers {
+	background: #F47940;
+}
+
+#pens {
+	background: #D1BD80;
+}
+
+#rangers {
+	background: #0161AB;
+}
+
+#panthers {
+	background: #D59C05;
+}
+
+#islanders {
+	background: #00529B;
+}
+
+#tampa {
+	background: #013E7D;
+}
+
+
+#wings {
+	background:#EC1F26;
+}
+
+
+/*East formatting*/
+#pair-r {
+	height: 75px;
+	width: 75px;
+	position: absolute;
+	right: 0;
+}
+
+#small-bracket-r {
+	height: 133%;
+	width: 30%;
+	border-top:5px solid #aca9a9;
+	border-left:5px solid #aca9a9;
+	border-bottom:5px solid #aca9a9;
+	position: relative;
+	right: 37%;
+	bottom: 233%;
+
+}
+
+#sb-end-r {
+	height: 5px;
+	width: 40%;
+	border-top: 5px solid #aca9a9;
+	position: relative;
+	right:72%;
+	bottom:312%;
+}
+
+#medium-bracket-r {
+	height: 282%;
+	width: 60%;
+	border-top:5px solid #aca9a9;
+	border-left:5px solid #aca9a9;
+	border-bottom:5px solid #aca9a9;
+	position: relative;
+	right: 238%;
+	bottom: 756%;
+}
+
+#mb-end-r {
+	height: 5px;
+	width: 130%;
+	border-top: 5px solid #aca9a9;
+	position: relative;
+	right:367%;
+	bottom:922%;
+}
+
+#all-r {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/*border: 1px solid red;*/
+}
+
+
+.top-r {
+	margin-bottom: 30px;
+}
+
+#circle-container-r{
+	width:100%;
+	height:100%;
+	}
+
+  .quarter{width:50%;height:50%}
+
+    .top-left{border-top-left-radius:250px;background:#aca9a9;float:left}
+
+    .top-right{border-top-right-radius:250px;background:#aca9a9;float:right}
+
+    .bottom-left{border-bottom-left-radius:250px;background:#aca9a9;float:left}
+
+    .bottom-right{border-bottom-right-radius:250px;background:#aca9a9;float:right}
+
+#logo-r {
+	width: 70%;
+	height: 70%;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+
+#logo-r img {
+	z-index: 10;
+	max-width:100%;
+	max-height:100%;
+	display: block;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+
+
+.r2-r {
+	position: relative;
+	right: 129px;
+	bottom: 280px;
+}
