@@ -28,15 +28,15 @@
 
 
 
-
+/* CIRCLE */
 /* Horizontal movement */
-#playoffs-bracket-view .bracket-slot.eastern.round-1{right:1%}
+#playoffs-bracket-view .bracket-slot.eastern.round-1{right:0}
 
-#playoffs-bracket-view .bracket-slot.western.round-1{left:1%}
+#playoffs-bracket-view .bracket-slot.western.round-1{left:0}
 
-#playoffs-bracket-view .bracket-slot.eastern.round-2{right:19%}
+#playoffs-bracket-view .bracket-slot.eastern.round-2{right:11%}
 
-#playoffs-bracket-view .bracket-slot.western.round-2{left:19%}
+#playoffs-bracket-view .bracket-slot.western.round-2{left:11%}
 
 #playoffs-bracket-view .bracket-slot.eastern.round-3{right:29%}
 
@@ -72,7 +72,7 @@
 /* Vertical movement */
 #playoffs-bracket-view .bracket-slot.central.round-1.rank-1,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-1,#playoffs-bracket-view .bracket-rank.central.rank-1,#playoffs-bracket-view .bracket-rank.atlantic.rank-1{top:1%}
 
-#playoffs-bracket-view .bracket-slot.central.round-1.rank-wc,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-wc,#playoffs-bracket-view .bracket-rank.central.rank-wc,#playoffs-bracket-view .bracket-rank.atlantic.rank-wc{top:17.6%}
+#playoffs-bracket-view .bracket-slot.central.round-1.rank-wc,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-wc,#playoffs-bracket-view .bracket-rank.central.rank-wc,#playoffs-bracket-view .bracket-rank.atlantic.rank-wc{top:9.5%}
 
 #playoffs-bracket-view .bracket-slot.central.round-1.rank-2,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-2,#playoffs-bracket-view .bracket-rank.central.rank-2,#playoffs-bracket-view .bracket-rank.atlantic.rank-2{top:30%}
 
@@ -86,9 +86,10 @@
 
 #playoffs-bracket-view .bracket-slot.pacific.round-1.rank-3,#playoffs-bracket-view .bracket-slot.metropolitan.round-1.rank-3,#playoffs-bracket-view .bracket-rank.pacific.rank-3,#playoffs-bracket-view .bracket-rank.metropolitan.rank-3{bottom:7%}
 
-#playoffs-bracket-view .bracket-slot.central.round-2.team-upper,#playoffs-bracket-view .bracket-slot.atlantic.round-2.team-upper{top:13.5%}
 
-#playoffs-bracket-view .bracket-slot.central.round-2.team-lower,#playoffs-bracket-view .bracket-slot.atlantic.round-2.team-lower{top:36.5%}
+#playoffs-bracket-view .bracket-slot.central.round-2.team-upper,#playoffs-bracket-view .bracket-slot.atlantic.round-2.team-upper{top:5.1%}
+
+#playoffs-bracket-view .bracket-slot.central.round-2.team-lower,#playoffs-bracket-view .bracket-slot.atlantic.round-2.team-lower{top:20.4%}
 
 #playoffs-bracket-view .bracket-slot.pacific.round-2.team-upper,#playoffs-bracket-view .bracket-slot.metropolitan.round-2.team-upper{bottom:36.5%}
 
@@ -124,6 +125,7 @@
 #playoffs-bracket-view .champion-logo-container{top:69%}#playoffs-bracket-view .broadcaster-logo-container{top:92%}
 
 
+/* BRACKETS */
 /* Bracket size */
 
 #playoffs-bracket-view .bracket-box{border-style:solid;border-color:#999;position:absolute}
@@ -144,40 +146,40 @@
 /*Round 1*/
 #playoffs-bracket-view .bracket-box.round-1{height:8%;width:3%}
 
-#playoffs-bracket-view .bracket-box.western.round-1{left:10.5%}
+#playoffs-bracket-view .bracket-box.western.round-1{left:4.5%}
 
-#playoffs-bracket-view .bracket-box.eastern.round-1{right:0}
+#playoffs-bracket-view .bracket-box.eastern.round-1{right:4.5%}
 
-#playoffs-bracket-view .bracket-box.division-upper.matchup-upper.round-1{top:9.5%}
+#playoffs-bracket-view .bracket-box.division-upper.matchup-upper.round-1{top:3.8%}
 
 #playoffs-bracket-view .bracket-box.division-upper.matchup-lower.round-1{top:30%}
 
 #playoffs-bracket-view .bracket-box.division-lower.matchup-upper.round-1{bottom:30%}
 
-#playoffs-bracket-view .bracket-box.division-lower.matchup-lower.round-1{bottom:7%}
+#playoffs-bracket-view .bracket-box.division-lower.matchup-lower.round-1{bottom:3.8%}
 
 /*Round 2*/
 #playoffs-bracket-view .bracket-box.round-2{height:15%;width:11.5%}
 
-#playoffs-bracket-view .bracket-box.western.round-2{left:13.5%}
+#playoffs-bracket-view .bracket-box.western.round-2{left:7.5%}
 
-#playoffs-bracket-view .bracket-box.eastern.round-2{right:3.3%}
+#playoffs-bracket-view .bracket-box.eastern.round-2{right:7.5%}
 
-#playoffs-bracket-view .bracket-box.western.division-upper.round-2{top:13.5%}
+#playoffs-bracket-view .bracket-box.western.division-upper.round-2{top:7.75%}
 
-#playoffs-bracket-view .bracket-box.western.division-lower.round-2{bottom:13.5%}
+#playoffs-bracket-view .bracket-box.western.division-lower.round-2{bottom:7.75%}
 
-#playoffs-bracket-view .bracket-box.eastern.division-upper.round-2{top:13.5%}
+#playoffs-bracket-view .bracket-box.eastern.division-upper.round-2{top:7.75%}
 
-#playoffs-bracket-view .bracket-box.eastern.division-lower.round-2{bottom:13.5%}
+#playoffs-bracket-view .bracket-box.eastern.division-lower.round-2{bottom:7.75%}
 
 
 /*Round 3*/
-#playoffs-bracket-view .bracket-box.round-3{height:30%;top:25%;width:12%}
+#playoffs-bracket-view .bracket-box.round-3{height:30%;top:15.25%;width:12%}
 
-#playoffs-bracket-view .bracket-box.western.round-3{left:25%}
+#playoffs-bracket-view .bracket-box.western.round-3{left:19%}
 
-#playoffs-bracket-view .bracket-box.eastern.round-3{right:14.8%}
+#playoffs-bracket-view .bracket-box.eastern.round-3{right:19%}
 
 
 /*Round 4*/
