@@ -1,8 +1,8 @@
-#playoffs-bracket-view{margin-bottom:30px}
+#playoffs-bracket-view{margin-bottom:32px}
 
-#playoffs-bracket-view .bracket-container{width:100%;position:relative;padding-top:80%}
+#playoffs-bracket-view .bracket-container{width:100%;position:relative;padding-top:85%}
 
-#playoffs-bracket-view .bracket-slot{width:4.5%;position:absolute;padding-top:4.5%;background-color:#999;border-radius:50%}
+#playoffs-bracket-view .bracket-slot{width:6.5%;position:absolute;padding-top:6.5%;background-color:#999;border-radius:50%}
 
 #playoffs-bracket-view .bracket-slot-content{position:absolute;left:0;right:0;top:0;bottom:0}
 
@@ -19,6 +19,24 @@
 #playoffs-bracket-view .broadcaster-logo-container{position:absolute;width:55%;padding-top:12%}#playoffs-bracket-view .broadcaster-logo{position:absolute;top:0;height:100%}@media (max-width:1199px){#playoffs-bracket-view .series-status,#playoffs-bracket-view .bracket-rank{display:none}}
 
 
+#playoffs-bracket-view .bracket-slot.atlantic,#playoffs-bracket-view .bracket-slot.eastern.round-4{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}
+
+#playoffs-bracket-view .bracket-slot.metropolitan{-webkit-transform:translate(50%,50%);transform:translate(50%,50%)}
+
+#playoffs-bracket-view .bracket-slot.central,#playoffs-bracket-view .bracket-slot.western.round-4,#playoffs-bracket-view .bracket-slot.round-4-winner,#playoffs-bracket-view .center-logo-container,#playoffs-bracket-view .champion-logo-container,#playoffs-bracket-view .broadcaster-logo-container{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
+
+#playoffs-bracket-view .bracket-slot.pacific{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}
+
+#playoffs-bracket-view .series-status.central,#playoffs-bracket-view .series-status.western.round-3,#playoffs-bracket-view .bracket-rank.central{-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}
+
+#playoffs-bracket-view .series-status.pacific,#playoffs-bracket-view .bracket-rank.pacific{-webkit-transform:translate(-100%,50%);transform:translate(-100%,50%)}
+
+#playoffs-bracket-view .series-status.atlantic,#playoffs-bracket-view .series-status.eastern.round-3,#playoffs-bracket-view .bracket-rank.atlantic{-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)
+}
+
+#playoffs-bracket-view .series-status.metropolitan,#playoffs-bracket-view .bracket-rank.metropolitan{-webkit-transform:translate(100%,50%);transform:translate(100%,50%)}
+
+#playoffs-bracket-view .series-status.round-4{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 
 
 
@@ -30,7 +48,7 @@
 
 #playoffs-bracket-view .bracket-slot.western.round-2{left:19%}
 
-#playoffs-bracket-view .bracket-slot.eastern.round-3{right:29%}
+#playoffs-bracket-view .bracket-slot.eastern.round-3{right:31%}
 
 #playoffs-bracket-view .bracket-slot.western.round-3{left:31%}
 
@@ -84,10 +102,7 @@
 
 #playoffs-bracket-view .bracket-slot.pacific.round-2.team-lower,#playoffs-bracket-view .bracket-slot.metropolitan.round-2.team-lower{bottom:13.5%}
 
-
-
-
-#playoffs-bracket-view .bracket-slot.central.round-3,#playoffs-bracket-view .bracket-slot.atlantic.round-3{top:22%}
+#playoffs-bracket-view .bracket-slot.central.round-3,#playoffs-bracket-view .bracket-slot.atlantic.round-3{top:25%}
 
 #playoffs-bracket-view .bracket-slot.pacific.round-3,#playoffs-bracket-view .bracket-slot.metropolitan.round-3{bottom:25%}
 
@@ -162,123 +177,3 @@
 #playoffs-bracket-view .bracket-box.eastern.round-4{right:37%}
 
 #playoffs-round-tabs-container .playoff-round-tab__round-link .round-name-short{display:none}@media (max-width:839px){#playoffs-round-tabs-container .playoff-round-tab__round-link .round-name{display:none}#playoffs-round-tabs-container .playoff-round-tab__round-link .round-name-short{display:inline}}#playoffs-title .jumbotron-header{text-transform:none}
-
-
-/*Team logo circle*/
-/*Margin between teams*/
-
-.quarter{width:50%;height:50%}
-
-.top-left{border-top-left-radius:100%;float:left}
-
-    .top-right{border-top-right-radius:100%;float:right}
-
-    .bottom-left{border-bottom-left-radius:100%;float:left}
-
-    .bottom-right{border-bottom-right-radius:100%;float:right}
-
-#logo-l {
-	width: 70%;
-	height: 70%;
-	position: absolute;
-	top: 15%;
-	left: 15%;
-}
-
-#logo-l img {
-	z-index: 10;
-	max-width:100%;
-	max-height:100%;
-	display: block;
-	margin: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-}
-
-#wrap {
-	width: 100%;
-	height: 100%;
-}
-
-
-#circle {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border-radius: 50%;
-}
-
-/*West*/
-#stars {
-	background: #006A4E;
-}
-
-#wild {
-	background: #BF2B37;
-}
-
-#blues {
-	background: #0546A0;
-}
-
-#hawks {
-	background: #E3263A;
-}
-
-#ducks {
-	background: #EF5225;
-}
-
-#predators {
-	background: #FDBB2F;
-}
-
-#kings {
-	background: #000000;
-}
-
-#sharks {
-	background: #05535D;
-}
-
-/*East*/
-#caps {
-	background: #CF132B;
-}
-
-#flyers {
-	background: #F47940;
-}
-
-#pens {
-	background: #D1BD80;
-}
-
-#rangers {
-	background: #0161AB;
-}
-
-#panthers {
-	background: #D59C05;
-}
-
-#islanders {
-	background: #00529B;
-}
-
-#tampa {
-	background: #013E7D;
-}
-
-
-#wings {
-	background:#EC1F26;
-}
