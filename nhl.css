@@ -30,9 +30,9 @@
 
 
 /* Horizontal movement */
-#playoffs-bracket-view .bracket-slot.eastern.round-1{right:0}
+#playoffs-bracket-view .bracket-slot.eastern.round-1{right:1%}
 
-#playoffs-bracket-view .bracket-slot.western.round-1{left:0}
+#playoffs-bracket-view .bracket-slot.western.round-1{left:1%}
 
 #playoffs-bracket-view .bracket-slot.eastern.round-2{right:19%}
 
