@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="nhl.css" media="screen">
+</head>
+<body>
+
+<section id="playoffs-bracket-view">
+    <div class="bracket-container">
+
+
+                <div class="bracket-box western division-upper matchup-upper round-1"></div>
+                <div class="bracket-box western division-upper matchup-lower round-1"></div>
+                <div class="bracket-box western division-lower matchup-upper round-1"></div>
+                <div class="bracket-box western division-lower matchup-lower round-1"></div>
+                <div class="bracket-box eastern division-upper matchup-upper round-1"></div>
+                <div class="bracket-box eastern division-upper matchup-lower round-1"></div>
+                <div class="bracket-box eastern division-lower matchup-upper round-1"></div>
+                <div class="bracket-box eastern division-lower matchup-lower round-1"></div>
+            
+                <div class="bracket-box western division-upper round-2"></div>
+                <div class="bracket-box western division-lower round-2"></div>
+                <div class="bracket-box eastern division-upper round-2"></div>
+                <div class="bracket-box eastern division-lower round-2"></div>
+            
+                <div class="bracket-box western round-3"></div>
+                <div class="bracket-box eastern round-3"></div>
+            
+                <div class="bracket-box western round-4"></div>
+                <div class="bracket-box eastern round-4"></div>
+            
+                <div class="bracket-slot eastern atlantic round-1 rank-1" id="series-a-top">
+                </div>
+                <div class="bracket-slot eastern atlantic round-1 rank-wc" id="series-a-bottom">
+                       
+                </div>
+                <div class="bracket-slot eastern atlantic round-1 rank-2" id="series-b-top"></div>
+                <div class="bracket-slot eastern atlantic round-1 rank-3" id="series-b-bottom"></div>
+                <div class="bracket-slot eastern metropolitan round-1 rank-1" id="series-c-top"></div>
+                <div class="bracket-slot eastern metropolitan round-1 rank-wc" id="series-c-bottom"></div>
+                <div class="bracket-slot eastern metropolitan round-1 rank-2" id="series-d-top"></div>
+                <div class="bracket-slot eastern metropolitan round-1 rank-3" id="series-d-bottom"></div>
+
+                <div class="bracket-slot western central round-1 rank-1" id="series-e-top">
+                        <div id="test">
+                            <div class="quarter top-left" id="stars"></div>
+                            <div class="quarter top-right" id="stars"></div>
+                            <div class="quarter bottom-left" id="stars"></div>
+                            <div class="quarter bottom-right" id="stars"></div>
+                        </div>
+                         <div id="logo-l">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Dallas_Stars_2013_crest.svg/1235px-Dallas_Stars_2013_crest.svg.png">
+                        </div>
+                </div>
+                <div class="bracket-slot western central round-1 rank-wc" id="series-e-bottom"></div>
+                <div class="bracket-slot western central round-1 rank-2" id="series-f-top"></div>
+                <div class="bracket-slot western central round-1 rank-3" id="series-f-bottom"></div>
+                <div class="bracket-slot western pacific round-1 rank-1" id="series-g-top"></div>
+                <div class="bracket-slot western pacific round-1 rank-wc" id="series-g-bottom"></div>
+                <div class="bracket-slot western pacific round-1 rank-2" id="series-h-top"></div>
+                <div class="bracket-slot western pacific round-1 rank-3" id="series-h-bottom"></div>
+            
+                <div class="bracket-slot eastern atlantic round-2 team-upper" id="series-i-top"></div>
+                <div class="bracket-slot eastern atlantic round-2 team-lower" id="series-i-bottom"></div>
+                <div class="bracket-slot eastern metropolitan round-2 team-upper" id="series-j-top"></div>
+                <div class="bracket-slot eastern metropolitan round-2 team-lower" id="series-j-bottom"></div>
+                <div class="bracket-slot western central round-2 team-upper" id="series-k-top"></div>
+                <div class="bracket-slot western central round-2 team-lower" id="series-k-bottom"></div>
+                <div class="bracket-slot western pacific round-2 team-upper" id="series-l-top"></div>
+                <div class="bracket-slot western pacific round-2 team-lower" id="series-l-bottom"></div>
+            
+                <div class="bracket-slot eastern atlantic round-3" id="series-m-top"></div>
+                <div class="bracket-slot eastern metropolitan round-3" id="series-m-bottom"></div>
+                <div class="bracket-slot western central round-3" id="series-n-top"></div>
+                <div class="bracket-slot western pacific round-3" id="series-n-bottom"></div>
+            
+                <div class="bracket-slot western round-4" id="series-o-western"></div>
+                <div class="bracket-slot eastern round-4" id="series-o-eastern"></div>
+            
+                <div class="bracket-slot round-4-winner" id="series-o-winner"></div>
+            
+                <div class="series-status eastern atlantic round-1 series-top" id="series-status-a"></div>
+                <div class="series-status eastern atlantic round-1 series-bottom" id="series-status-b"></div>
+                <div class="series-status eastern metropolitan round-1 series-top" id="series-status-c"></div>
+                <div class="series-status eastern metropolitan round-1 series-bottom" id="series-status-d"></div>
+                <div class="series-status western central round-1 series-top" id="series-status-e"></div>
+                <div class="series-status western central round-1 series-bottom" id="series-status-f"></div>
+                <div class="series-status western pacific round-1 series-top" id="series-status-g"></div>
+                <div class="series-status western pacific round-1 series-bottom" id="series-status-h"></div>
+            
+                <div class="series-status eastern atlantic round-2" id="series-status-i"></div>
+                <div class="series-status eastern metropolitan round-2" id="series-status-j"></div>
+                <div class="series-status western central round-2" id="series-status-k"></div>
+                <div class="series-status western pacific round-2" id="series-status-l"></div>
+            
+                <div class="series-status eastern round-3" id="series-status-m"></div>
+                <div class="series-status western round-3" id="series-status-n"></div>
+            
+                <div class="series-status round-4" id="series-status-o"></div>
+            
+                <div class="bracket-rank eastern atlantic rank-1" id="rank-a-top"></div>
+                <div class="bracket-rank eastern atlantic rank-wc" id="rank-a-bottom"></div>
+                <div class="bracket-rank eastern atlantic rank-2" id="rank-b-top"></div>
+                <div class="bracket-rank eastern atlantic rank-3" id="rank-b-bottom"></div>
+                <div class="bracket-rank eastern metropolitan rank-1" id="rank-c-top"></div>
+                <div class="bracket-rank eastern metropolitan rank-wc" id="rank-c-bottom"></div>
+                <div class="bracket-rank eastern metropolitan rank-2" id="rank-d-top"></div>
+                <div class="bracket-rank eastern metropolitan rank-3" id="rank-d-bottom"></div>
+                <div class="bracket-rank western central rank-1" id="rank-e-top"></div>
+                <div class="bracket-rank western central rank-wc" id="rank-e-bottom"></div>
+                <div class="bracket-rank western central rank-2" id="rank-f-top"></div>
+                <div class="bracket-rank western central rank-3" id="rank-f-bottom"></div>
+                <div class="bracket-rank western pacific rank-1" id="rank-g-top"></div>
+                <div class="bracket-rank western pacific rank-wc" id="rank-g-bottom"></div>
+                <div class="bracket-rank western pacific rank-2" id="rank-h-top"></div>
+            </div>
+            </section>
+                        
+</html>
+</body>
+
+
