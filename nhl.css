@@ -7,11 +7,25 @@ html {
   	background-size: cover;*/
 }
 
-#playoffs-bracket-view{width:100%; margin-bottom:30px;}
+@media (min-width: 1308px)
+#template {
+    width: 1284px;
+}
+#template {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#playoffs-bracket-view{width:90%; margin-bottom:30px; margin-right: auto; margin-left: auto;}
 
 #playoffs-bracket-view .bracket-container{position:relative;padding-top:80%}
 
 #playoffs-bracket-view .bracket-slot{width:4.5%;position:absolute;padding-top:4.5%;background-color:#999;border-radius:50%}
+
+#playoffs-bracket-view .bracket-slot-winner{width:8%;position:absolute;padding-top:8%;background-color:#999;border-radius:50%}
 
 #playoffs-bracket-view .bracket-slot-content{position:absolute;left:0;right:0;top:0;bottom:0}
 
@@ -63,8 +77,9 @@ html {
 #playoffs-bracket-view .bracket-slot.western.round-4{left:37%}
 
 
-#playoffs-bracket-view .bracket-slot.round-4-winner{left:47.75%}
+#playoffs-bracket-view .bracket-slot.round-4-winner{left:48%}
 
+#playoffs-bracket-view .bracket-slot-winner{left:46.25%}
 
 
 #playoffs-bracket-view .series-status.eastern.round-1{right:12%}
@@ -85,7 +100,7 @@ html {
 
 #playoffs-bracket-view .bracket-rank.western{left:5%}
 
-#playoffs-bracket-view .center-logo-container,#playoffs-bracket-view .champion-logo-container,#playoffs-bracket-view .broadcaster-logo-container{left:50%}
+#playoffs-bracket-view .center-logo-container,#playoffs-bracket-view .champion-logo-container,#playoffs-bracket-view .broadcaster-logo-container{left:34.5%}
 
 
 /* Vertical movement */
@@ -126,7 +141,11 @@ html {
 
 #playoffs-bracket-view .bracket-slot.round-4{top:30%}
 
-#playoffs-bracket-view .bracket-slot.round-4-winner{top:56%}
+#playoffs-bracket-view .bracket-slot.round-4-winner{top:46%}
+
+#playoffs-bracket-view .bracket-slot-winner{top:42%}
+
+
 
 #playoffs-bracket-view .series-status.central.round-1.series-top,#playoffs-bracket-view .series-status.atlantic.round-1.series-top{top:13.5%}
 
@@ -142,7 +161,7 @@ html {
 
 #playoffs-bracket-view .series-status.eastern.round-3,#playoffs-bracket-view .series-status.western.round-3{top:50%}
 
-#playoffs-bracket-view .series-status.round-4{top:82%}#playoffs-bracket-view .center-logo-container{top:19%}
+#playoffs-bracket-view .series-status.round-4{top:82%}#playoffs-bracket-view .center-logo-container{top:0}
 
 #playoffs-bracket-view .champion-logo-container{top:69%}#playoffs-bracket-view .broadcaster-logo-container{top:92%}
 
@@ -219,6 +238,8 @@ html {
 
 #playoffs-title .jumbotron-header{text-transform:none}
 
+
+#series-o-winner {width:4.5%;position:absolute;padding-top:4.5%;background-color:#fff;border-radius:50%}
 
 /*Team logo circle*/
 /*Margin between teams*/
