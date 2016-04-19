@@ -35,12 +35,12 @@ html {
 	margin-left: auto;
 }
 
-#playoffs-bracket-view .bracket-container{
+.bracket-container{
 	position:relative;
 	padding-top:80%
 }
 
-#playoffs-bracket-view .bracket-slot{
+.bracket-slot{
 	width:4.5%;
 	position:absolute;
 	padding-top:4.5%;
