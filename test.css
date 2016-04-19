@@ -179,20 +179,93 @@ html {
 
 .bracket-box.western.round-4,.bracket-box.eastern.round-4{border-width:1px 0 0 0}}
 
+/* Bracket round 1 color */
+/* Caps v Flyers */
 .bracket-box.eastern.division-upper.matchup-upper.round-1 {
 	border-color: #CF132B;
 }
+/* Tampa v Wings */
+.bracket-box.eastern.division-lower.matchup-lower.round-1 {
+	border-color: #;
+}
+/* Florida v Isles */
+.bracket-box.eastern.division-upper.matchup-lower.round-1 {
+	border-color: #;
+}
+/* Pens v Rangers */
+.bracket-box.eastern.division-lower.matchup-upper.round-1 {
+	border-color: #D1BD80;
+}
 
-.bracket-box-
+/* Stars v Wild */
+.bracket-box.western.division-upper.matchup-upper.round-1 {
+	border-color: #;
+}
+/* Blues v Hawks */
+.bracket-box.western.division-lower.matchup-upper.round-1 {
+	border-color: #;
+}
+/* Ducks v Preds */
+.bracket-box.western.division-upper.matchup-lower.round-1 {
+	border-color: #;
+}
+/* Kings v Sharks */
+.bracket-box.western.division-lower.matchup-lower.round-1 {
+	border-color: #;
+}
 
-.wdu.mask {
-	border-width: 5px 0px 5px 0;
-	border-top-color:#CF132B;
-	border-bottom-color:#;
+/* Bracket round 2 end mask and color */
+.bracket-box.mask {
 	height: 17%;
 	width: 5.75%;
 	z-index: 15;
+	border-width: 5px 0px 5px 0;
 }
+
+.bracket-box.edu.mask {
+	border-top-color:#CF132B;
+	border-bottom-color:#D1BD80;
+
+}
+
+.bracket-box.edl.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
+.bracket-box.wdu.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
+.bracket-box.wdl.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
+/* Bracket round 3 end mask and color */
+.bracket-box.mask-3 {
+	height: 35%;
+	width: 6%;
+	top: 16.25%;
+	z-index: 15;
+	border-width: 5px 0px 5px 0;
+}
+
+.bracket-box.e.mask-3 {
+	border-top-color:#CF132B;
+	border-bottom-color:#D1BD80;
+}
+
+.bracket-box.w.mask-3 {
+	border-top-color:#;
+	border-bottom-color:#;
+}
+
+
 
 /*Bracket height and width*/
 
@@ -214,25 +287,25 @@ html {
 /*Round 2*/
 .bracket-box.round-2{height:17%;width:11.5%}
 
-.bracket-box.western.round-2{left:7.5%}
+.bracket-box.western.round-2,.wdu.mask,.wdl.mask{left:7.5%}
 
-.bracket-box.eastern.round-2,.wdu.mask{right:7.5%}
+.bracket-box.eastern.round-2,.edu.mask,.edl.mask{right:7.5%}
 
-.bracket-box.western.division-upper.round-2{top:7.75%}
+.bracket-box.western.division-upper.round-2,.wdu.mask{top:7.75%}
 
-.bracket-box.western.division-lower.round-2{bottom:38.75%}
+.bracket-box.western.division-lower.round-2,.wdl.mask{bottom:38.75%}
 
-.bracket-box.eastern.division-upper.round-2,.mask{top:7.75%}
+.bracket-box.eastern.division-upper.round-2,.edu.mask{top:7.75%;border-color:#CF132B;}
 
-.bracket-box.eastern.division-lower.round-2{bottom:38.75%}
+.bracket-box.eastern.division-lower.round-2,.edl.mask{bottom:38.75%}
 
 
 /*Round 3*/
 .bracket-box.round-3{height:35%;top:16.25%;width:12%}
 
-.bracket-box.western.round-3{left:19%}
+.bracket-box.western.round-3,.w.mask-3{left:19%}
 
-.bracket-box.eastern.round-3{right:19%}
+.bracket-box.eastern.round-3,.e.mask-3{right:19%;border-color:#CF132B;}
 
 
 /*Round 4*/
@@ -240,7 +313,7 @@ html {
 
 .bracket-box.western.round-4{left:31%}
 
-.bracket-box.eastern.round-4{right:31%}
+.bracket-box.eastern.round-4{right:31%;border-color:#CF132B;}
 
 
 /*Team logo circle*/
