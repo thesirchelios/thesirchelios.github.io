@@ -45,7 +45,8 @@ html {
 	position:absolute;
 	padding-top:4.5%;
 	background-color:#999;
-	border-radius:50%
+	border-radius:50%;
+	z-index:17;
 }
 
 /* Winner */
@@ -178,6 +179,20 @@ html {
 
 .bracket-box.western.round-4,.bracket-box.eastern.round-4{border-width:1px 0 0 0}}
 
+.bracket-box.eastern.division-upper.matchup-upper.round-1 {
+	border-color: #CF132B;
+}
+
+.bracket-box-
+
+.wdu.mask {
+	border-width: 5px 0px 5px 0;
+	border-top-color:#CF132B;
+	border-bottom-color:#;
+	height: 17%;
+	width: 5.75%;
+	z-index: 15;
+}
 
 /*Bracket height and width*/
 
@@ -201,13 +216,13 @@ html {
 
 .bracket-box.western.round-2{left:7.5%}
 
-.bracket-box.eastern.round-2{right:7.5%}
+.bracket-box.eastern.round-2,.wdu.mask{right:7.5%}
 
 .bracket-box.western.division-upper.round-2{top:7.75%}
 
 .bracket-box.western.division-lower.round-2{bottom:38.75%}
 
-.bracket-box.eastern.division-upper.round-2{top:7.75%}
+.bracket-box.eastern.division-upper.round-2,.mask{top:7.75%}
 
 .bracket-box.eastern.division-lower.round-2{bottom:38.75%}
 
