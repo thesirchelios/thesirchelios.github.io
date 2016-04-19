@@ -1,3 +1,9 @@
+/*************************************************/
+/* CSS for stanleycupbracket.site                */
+/* Author: MH2                                   */
+/* Version: 1.0                                  */
+/*************************************************/
+
 html {
 	background-color: #eee;
 	/*background: url(http://media.gettyimages.com/photos/nicklas-lidstrom-of-the-detroit-red-wings-celebrates-with-the-stanley-picture-id81777519) no-repeat center center fixed; 
@@ -7,161 +13,233 @@ html {
   	background-size: cover;*/
 }
 
-#page-container {
-	width: 100%;
-	height: 90%;
+
+/* General page sizing */
+@media (min-width: 1308px)
+#template {
+    width: 1284px;
+}
+#template {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
-#middle {
-	width: 500px;
-	height: 500px;
-	margin: auto;
-	border: 1px solid aqua;
+/* General bracket and circle formatting */
+#playoffs-bracket-view{
+	width:90%; 
+	margin-bottom:30px; 
+	margin-right: auto;
+	margin-left: auto;
 }
 
-#middle img {
-	max-width: 300px;
-	max-height: 300px;
-	display: block;
-	margin: auto;
+#playoffs-bracket-view .bracket-container{
+	position:relative;
+	padding-top:80%
 }
 
-#champion img {
-
+#playoffs-bracket-view .bracket-slot{
+	width:4.5%;
+	position:absolute;
+	padding-top:4.5%;
+	background-color:#999;
+	border-radius:50%
 }
 
-#west{
-	width: 50%;
-	position: absolute;
+/* Winner */
+.bracket-slot-winner{
+	width:8%;
+	position:absolute;
+	padding-top:8%;
+	background-color:#999;
+	border-radius:50%
+}
+
+.bracket-slot-content{position:absolute;
 	left:0;
-	top: 0;
-	padding: 10px;
+	right:0;
+	top:0;
+	bottom:0
 }
 
 
-#east {
-	width: 50%;
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 10px;
-	margin-right: 10px;
+/* Stanley Cup Logo */
+.logo-container{
+	position:absolute;
+	width:31%;
+	padding-top:31%
+}
+
+.logo{
+	position:absolute;
+	top:0;
+	height:100%
 }
 
 
 
-/*West formating */
-#group-left {
-	height: 150px;
-	width: 150px;
+/* CIRCLE */
+/* Horizontal movement */
+.bracket-slot.eastern.round-1{right:0}
 
+.bracket-slot.western.round-1{left:0}
+
+
+.bracket-slot.eastern.round-2{right:11%}
+
+.bracket-slot.western.round-2{left:11%}
+
+
+.bracket-slot.eastern.round-3{right:23%}
+
+.bracket-slot.western.round-3{left:23%}
+
+
+.bracket-slot.eastern.round-4{right:37%}
+
+.bracket-slot.western.round-4{left:37%}
+
+
+.bracket-slot.round-4-winner{left:48%}
+
+.bracket-slot-winner{left:46.25%}
+
+
+/* Logo */
+.logo-container{left:34.5%}
+
+
+/* Vertical movement */
+#playoffs-bracket-view .bracket-slot.central.round-1.rank-1,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-1,#playoffs-bracket-view .bracket-rank.central.rank-1,#playoffs-bracket-view .bracket-rank.atlantic.rank-1{top:1%}
+
+#playoffs-bracket-view .bracket-slot.central.round-1.rank-wc,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-wc,#playoffs-bracket-view .bracket-rank.central.rank-wc,#playoffs-bracket-view .bracket-rank.atlantic.rank-wc{top:9.5%}
+
+#playoffs-bracket-view .bracket-slot.central.round-1.rank-2,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-2,#playoffs-bracket-view .bracket-rank.central.rank-2,#playoffs-bracket-view .bracket-rank.atlantic.rank-2{top:18.5%}
+
+#playoffs-bracket-view .bracket-slot.central.round-1.rank-3,#playoffs-bracket-view .bracket-slot.atlantic.round-1.rank-3,#playoffs-bracket-view .bracket-rank.central.rank-3,#playoffs-bracket-view .bracket-rank.atlantic.rank-3{top:26.75%}
+
+#playoffs-bracket-view .bracket-slot.pacific.round-1.rank-1,#playoffs-bracket-view .bracket-slot.metropolitan.round-1.rank-1,#playoffs-bracket-view .bracket-rank.pacific.rank-1,#playoffs-bracket-view .bracket-rank.metropolitan.rank-1{bottom:57.5%}
+
+#playoffs-bracket-view .bracket-slot.pacific.round-1.rank-wc,#playoffs-bracket-view .bracket-slot.metropolitan.round-1.rank-wc,#playoffs-bracket-view .bracket-rank.pacific.rank-wc,#playoffs-bracket-view .bracket-rank.metropolitan.rank-wc{bottom:49.2%}
+
+#playoffs-bracket-view .bracket-slot.pacific.round-1.rank-2,#playoffs-bracket-view .bracket-slot.metropolitan.round-1.rank-2,#playoffs-bracket-view .bracket-rank.pacific.rank-2,#playoffs-bracket-view .bracket-rank.metropolitan.rank-2{bottom:40.2%}
+
+#playoffs-bracket-view .bracket-slot.pacific.round-1.rank-3,#playoffs-bracket-view .bracket-slot.metropolitan.round-1.rank-3,#playoffs-bracket-view .bracket-rank.pacific.rank-3,#playoffs-bracket-view .bracket-rank.metropolitan.rank-3{bottom:31.8%}
+
+
+/* Round 2 */
+.bracket-slot.central.round-2.team-upper,.bracket-slot.atlantic.round-2.team-upper{top:5.1%}
+
+.bracket-slot.central.round-2.team-lower,.bracket-slot.atlantic.round-2.team-lower{top:22.4%}
+
+.bracket-slot.pacific.round-2.team-upper,.bracket-slot.metropolitan.round-2.team-upper{bottom:53.5%}
+
+.bracket-slot.pacific.round-2.team-lower,.bracket-slot.metropolitan.round-2.team-lower{bottom:36%}
+
+
+
+/* Round 3 */
+.bracket-slot.central.round-3,.bracket-slot.atlantic.round-3{top:13.5%}
+
+.bracket-slot.pacific.round-3,.bracket-slot.metropolitan.round-3{bottom:45.5%}
+
+
+
+.bracket-slot.round-4{top:30%}
+
+.bracket-slot.round-4-winner{top:46%}
+
+.bracket-slot-winner{top:42%}
+
+.logo-container{top:0}
+
+
+
+/* BRACKETS */
+/* Bracket size */
+
+.bracket-box{
+	border-style:solid;
+	border-color:#999;
+	position:absolute;
 }
 
-/*Brackets*/
+.bracket-box.western{border-width:5px 5px 5px 0}
 
-/*Round 1 brackets*/
+.bracket-box.eastern{border-width:5px 0 5px 5px}
 
-#small-bracket-l {
-	height: 67%;
-	width: 10%;
-	border-top:5px solid #aca9a9;
-	border-right:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	left: 50%;
-	bottom: 117%;
+.bracket-box.western.round-4,.bracket-box.eastern.round-4{border-width:5px 0 0 0}
 
-}
+@media (max-width:799px){.bracket-box.western{border-width:1px 1px 1px 0}
 
-#sb-end-l {
-	height: 5px;
-	width: 22%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	left:63%;
-	bottom:157%;
-}
+.bracket-box.eastern{border-width:1px 0 1px 1px}
 
-/*Round 2 brackets*/
-#medium-bracket-l {
-	height: 146%;
-	width: 22%;
-	border-right:5px solid #aca9a9;
-	border-top:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	left: 135%;
-	bottom: 383%;
-}
+.bracket-box.western.round-4,.bracket-box.eastern.round-4{border-width:1px 0 0 0}}
 
-#mb-end-l {
-	height: 5px;
-	width: 62%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	left:160%;
-	bottom:465%;
-}
 
-/*Round 3 brackets*/
+/*Bracket height and width*/
 
-#large-bracket-l {
-	height: 329%;
-	width: 62%;
-	border-right:5px solid #aca9a9;
-	border-top:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	left: 272%;
-	bottom: 803%;
-}
+/*Round 1*/
+.bracket-box.round-1{height:8%;width:3%}
 
-#lb-end-l {
-	height: 5px;
-	width: 82%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	left:335%;
-	bottom:975%;
-}
+.bracket-box.western.round-1{left:4.5%}
+
+.bracket-box.eastern.round-1{right:4.5%}
+
+.bracket-box.division-upper.matchup-upper.round-1{top:3.8%}
+
+.bracket-box.division-upper.matchup-lower.round-1{top:39.5%}
+
+.bracket-box.division-lower.matchup-upper.round-1{bottom:70.2%}
+
+.bracket-box.division-lower.matchup-lower.round-1{bottom:34.5%}
+
+/*Round 2*/
+.bracket-box.round-2{height:17%;width:11.5%}
+
+.bracket-box.western.round-2{left:7.5%}
+
+.bracket-box.eastern.round-2{right:7.5%}
+
+.bracket-box.western.division-upper.round-2{top:7.75%}
+
+.bracket-box.western.division-lower.round-2{bottom:38.75%}
+
+.bracket-box.eastern.division-upper.round-2{top:7.75%}
+
+.bracket-box.eastern.division-lower.round-2{bottom:38.75%}
+
+
+/*Round 3*/
+.bracket-box.round-3{height:35%;top:16.25%;width:12%}
+
+.bracket-box.western.round-3{left:19%}
+
+.bracket-box.eastern.round-3{right:19%}
+
+
+/*Round 4*/
+.bracket-box.round-4{height:0;width:6%;top:32.5%}
+
+.bracket-box.western.round-4{left:31%}
+
+.bracket-box.eastern.round-4{right:31%}
 
 
 /*Team logo circle*/
-#all-l {
-	width: 50%;
-	height: 50%;
-	position: relative;
-	/*border: 1px solid red;*/
-}
-
-#all-l-big {
-	width: 75%;
-	height: 75%;
-	position: relative;
-}
-
 /*Margin between teams*/
-.top-l {
-	margin-bottom: 30px;
-}
 
+.quarter{width:50%;height:50%}
 
-#circle-container-l, 
-#logo-l {
-	width:100%;
-	height:100%;
-	position: absolute;
-	}
+.top-left{border-top-left-radius:100%;float:left}
 
-  .quarter{width:50%;height:50%}
+    .top-right{border-top-right-radius:100%;float:right}
 
-    .top-left{border-top-left-radius:250px;background:#aca9a9;float:left}
+    .bottom-left{border-bottom-left-radius:100%;float:left}
 
-    .top-right{border-top-right-radius:250px;background:#aca9a9;float:right}
-
-    .bottom-left{border-bottom-left-radius:250px;background:#aca9a9;float:left}
-
-    .bottom-right{border-bottom-right-radius:250px;background:#aca9a9;float:right}
+    .bottom-right{border-bottom-right-radius:100%;float:right}
 
 #logo-l {
 	width: 70%;
@@ -185,33 +263,22 @@ html {
 
 }
 
-
-/*Round 2 circle positions*/
-
-.r2-l {
-	position: relative;
-	left:85%;
-	bottom: 187%;
-	z-index: 1;
+#wrap {
+	width: 100%;
+	height: 100%;
 }
 
-/*Round 3 circle positions*/
 
-.r3-l {
-	position: relative;
-	left: 222%;
-	bottom: 187%;
+#circle {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
 }
-
-/*Round 4 circle positions*/
-
-.r4-l {
-	position: relative;
-	left: 417%;
-	bottom: 437%;
-}
-
-/* Team colors */
 
 /*West*/
 #stars {
@@ -278,149 +345,4 @@ html {
 
 #wings {
 	background:#EC1F26;
-}
-
-
-/*East formatting*/
-#pair-r {
-	height: 75px;
-	width: 75px;
-	position: absolute;
-	right: 0;
-}
-
-#small-bracket-r {
-	height: 133%;
-	width: 30%;
-	border-top:5px solid #aca9a9;
-	border-left:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	right: 37%;
-	bottom: 233%;
-
-}
-
-#sb-end-r {
-	height: 5px;
-	width: 40%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	right:72%;
-	bottom:312%;
-}
-
-#medium-bracket-r {
-	height: 282%;
-	width: 60%;
-	border-top:5px solid #aca9a9;
-	border-left:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	right: 238%;
-	bottom: 756%;
-}
-
-#mb-end-r {
-	height: 5px;
-	width: 130%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	right:367%;
-	bottom:922%;
-}
-
-#large-bracket-r {
-	height: 665%;
-	width: 130%;
-	border-top:5px solid #aca9a9;
-	border-left:5px solid #aca9a9;
-	border-bottom:5px solid #aca9a9;
-	position: relative;
-	right: 604%;
-	bottom: 1606%;
-}
-
-#lb-end-r {
-	height: 5px;
-	width: 160%;
-	border-top: 5px solid #aca9a9;
-	position: relative;
-	right:758%;
-	bottom:1948%;
-}
-
-#all-r {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	/*border: 1px solid red;*/
-}
-
-#all-r-big {
-	width: 150%;
-	height: 150%;
-	position: relative;
-}
-
-
-.top-r {
-	margin-bottom: 30px;
-}
-
-#circle-container-r{
-	width:100%;
-	height:100%;
-	}
-
-  .quarter{width:50%;height:50%}
-
-    .top-left{border-top-left-radius:250px;background:#aca9a9;float:left}
-
-    .top-right{border-top-right-radius:250px;background:#aca9a9;float:right}
-
-    .bottom-left{border-bottom-left-radius:250px;background:#aca9a9;float:left}
-
-    .bottom-right{border-bottom-right-radius:250px;background:#aca9a9;float:right}
-
-#logo-r {
-	width: 70%;
-	height: 70%;
-	position: absolute;
-	top: 15%;
-	left: 15%;
-}
-
-#logo-r img {
-	z-index: 10;
-	max-width:100%;
-	max-height:100%;
-	display: block;
-	margin: auto;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-}
-
-
-.r2-r {
-	position: relative;
-	right: 129px;
-	bottom: 280px;
-}
-
-.r3-r {
-	position: relative;
-	right: 350px;
-	bottom: 287px;
-}
-
-.r4-r {
-	position: relative;
-	right: 680px;
-	bottom: 215%;
-	z-index: 1;
 }
