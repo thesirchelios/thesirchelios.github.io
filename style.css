@@ -45,7 +45,8 @@ html {
 	position:absolute;
 	padding-top:4.5%;
 	background-color:#999;
-	border-radius:50%
+	border-radius:50%;
+	z-index:17;
 }
 
 /* Winner */
@@ -178,6 +179,73 @@ html {
 
 .bracket-box.western.round-4,.bracket-box.eastern.round-4{border-width:1px 0 0 0}}
 
+/* Bracket round 1 color */
+/* Caps v Flyers */
+.bracket-box.eastern.division-upper.matchup-upper.round-1 {
+	border-color: #;
+}
+/* Tampa v Wings */
+.bracket-box.eastern.division-lower.matchup-lower.round-1 {
+	border-color: #013E7D;
+}
+/* Florida v Isles */
+.bracket-box.eastern.division-upper.matchup-lower.round-1 {
+	border-color: #;
+}
+/* Pens v Rangers */
+.bracket-box.eastern.division-lower.matchup-upper.round-1 {
+	border-color: #;
+}
+
+/* Stars v Wild */
+.bracket-box.western.division-upper.matchup-upper.round-1 {
+	border-color: #;
+}
+/* Blues v Hawks */
+.bracket-box.western.division-lower.matchup-upper.round-1 {
+	border-color: #;
+}
+/* Ducks v Preds */
+.bracket-box.western.division-upper.matchup-lower.round-1 {
+	border-color: #;
+}
+/* Kings v Sharks */
+.bracket-box.western.division-lower.matchup-lower.round-1 {
+	border-color: #;
+}
+
+/* Bracket round 2 end mask and color */
+.bracket-box.mask {
+	height: 17%;
+	width: 5.75%;
+	z-index: 15;
+	border-width: 5px 0px 5px 0;
+}
+
+.bracket-box.edu.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
+.bracket-box.edl.mask {
+	border-top-color:#;
+	border-bottom-color:#013E7D;
+
+}
+
+.bracket-box.wdu.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
+.bracket-box.wdl.mask {
+	border-top-color:#;
+	border-bottom-color:#;
+
+}
+
 
 /*Bracket height and width*/
 
@@ -199,17 +267,17 @@ html {
 /*Round 2*/
 .bracket-box.round-2{height:17%;width:11.5%}
 
-.bracket-box.western.round-2{left:7.5%}
+.bracket-box.western.round-2,.wdu.mask,.wdl.mask{left:7.5%}
 
-.bracket-box.eastern.round-2{right:7.5%}
+.bracket-box.eastern.round-2,.edu.mask,.edl.mask{right:7.5%}
 
-.bracket-box.western.division-upper.round-2{top:7.75%}
+.bracket-box.western.division-upper.round-2,.wdu.mask{top:7.75%}
 
-.bracket-box.western.division-lower.round-2{bottom:38.75%}
+.bracket-box.western.division-lower.round-2,.wdl.mask{bottom:38.75%}
 
-.bracket-box.eastern.division-upper.round-2{top:7.75%}
+.bracket-box.eastern.division-upper.round-2,.edu.mask{top:7.75%;border-color:#;}
 
-.bracket-box.eastern.division-lower.round-2{bottom:38.75%}
+.bracket-box.eastern.division-lower.round-2,.edl.mask{bottom:38.75%;border-color: #;}
 
 
 /*Round 3*/
