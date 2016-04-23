@@ -10,6 +10,78 @@
         <title> TEST </title>
         <link rel="stylesheet" type="text/css" href="test.css" media="screen">
         <link rel="shortcut icon" type="image/png" href="icon.png"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+        <script>
+            var url = "https://statsapi.web.nhl.com/api/v1/tournaments/playoffs?expand=round.series&season=20152016&site=en_nhl";
+            $.getJSON( url, function( data ) {
+
+                var cats = data['rounds'][0]['series'][0]['matchupTeams'][0];
+                //var cats_wins = data['rounds'][0]['series'][0]['matchupTeams'][0]['seriesRecord']['wins'];
+                var cats_wins = cats['seriesRecord']['wins'];
+                var cats_name = cats['team']['name'];
+
+
+            console.log(data);
+            console.log(cats);
+            console.log(cats_wins);
+            console.log(cats_name);
+
+                            /*
+                            <div class="quarter top-left"id="" ></div>
+                            <div class="quarter top-right" id="panthers"></div>
+                            <div class="quarter bottom-left" id=""></div>
+                            <div class="quarter bottom-right" id=""></div>
+                            */
+
+            cats_name == 'Florida Panthers'
+            if (cats_wins == 1) {
+            //document.getElementById("circle").innerHTML = "<div>5</div>";
+            //document.write(5);
+            }
+
+            });
+                /*
+            var items = [];
+              $.each( data.rounds, function( key, val ) {
+                $.each(val.series, function (foo, faa) {
+                    $.each (faa.matchupTeams, function (x, y ) {
+                        $.each (y, function (a, b) {
+                            $.each (b, function (k, l) {
+                                items.push( "<li id='" + k + "'>" + l + "</li>" );
+                                var name = b['name'];
+                                var wins = b['wins'];
+
+                                document.write(name);
+                                document.write(wins);
+                            })
+                            //items.push( "<li id='" + a + "'>" + b + "</li>" );
+                        })
+                        //items.push( "<li id='" + x + "'>" + y + "</li>" );
+
+                    })
+                    //items.push( "<li id='" + foo + "'>" + faa + "</li>" );
+                })
+                //items.push( "<li id='" + key + "'>" + val + "</li>" );
+              });
+             
+              $( "<ul/>", {
+                "class": "my-new-list",
+                html: items.join( "" )
+              }).appendTo( "body" );
+
+          
+
+            console.log(data);
+            });
+
+            */
+        
+            //console.log('hello');
+
+
+
+        </script>
     </head>
 
 <body>
@@ -89,10 +161,10 @@
                 <div class="bracket-slot eastern atlantic round-1 rank-2">
                     <div id="wrap">
                         <div id="circle">
-                            <div class="quarter top-left" id=""></div>
+                            <div class="quarter top-left" id="pens"></div>
                             <div class="quarter top-right" id="pens"></div>
-                            <div class="quarter bottom-left" id=""></div>
-                            <div class="quarter bottom-right" id=""></div>
+                            <div class="quarter bottom-left" id="pens"></div>
+                            <div class="quarter bottom-right" id="pens"></div>
                         </div>
                          <div id="logo-l">
                                 <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Pittsburgh_Penguins_logo.svg">
@@ -117,10 +189,11 @@
                 <div class="bracket-slot eastern metropolitan round-1 rank-1">
                     <div id="wrap">
                         <div id="circle">
-                            <div class="quarter top-left"id="" ></div>
+                            <div class="quarter top-left"id="panthers" ></div>
                             <div class="quarter top-right" id="panthers"></div>
-                            <div class="quarter bottom-left" id=""></div>
-                            <div class="quarter bottom-right" id=""></div>
+                            <div class="quarter bottom-left" id="panthers"></div>
+                            <div class="quarter bottom-right" id="panthers"></div>
+                        
                         </div>
                          <div id="logo-l">
                                 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Florida_Panthers.svg/1047px-Florida_Panthers.svg.png">
@@ -156,10 +229,10 @@
                 <div class="bracket-slot eastern metropolitan round-1 rank-3">
                     <div id="wrap">
                         <div id="circle">
-                            <div class="quarter top-left"id="" ></div>
+                            <div class="quarter top-left"id="wings" ></div>
                             <div class="quarter top-right" id="wings"></div>
-                            <div class="quarter bottom-left" id=""></div>
-                            <div class="quarter bottom-right" id=""></div>
+                            <div class="quarter bottom-left" id="wings"></div>
+                            <div class="quarter bottom-right" id="wings"></div>
                         </div>
                         <a href="http://reddit.com/u/masterhaldentwo">
                          <div id="logo-l">
@@ -309,17 +382,50 @@
                 </div>
                 <!-- Winner 2 v 3   -->
                 <div class="bracket-slot eastern atlantic round-2 team-lower">
-
+                    <div id="wrap">
+                        <div id="circle">
+                            <div class="quarter top-left" id=""></div>
+                            <div class="quarter top-right" id="pens"></div>
+                            <div class="quarter bottom-left" id=""></div>
+                            <div class="quarter bottom-right" id=""></div>
+                        </div>
+                         <div id="logo-l">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Pittsburgh_Penguins_logo.svg">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Metro   -->
                 <!--  Winner 1 v WC  -->
                 <div class="bracket-slot eastern metropolitan round-2 team-upper">
-
+                    <div id="wrap">
+                        <div id="circle">
+                            <div class="quarter top-left"id="panthers" ></div>
+                            <div class="quarter top-right" id="panthers"></div>
+                            <div class="quarter bottom-left" id="panthers"></div>
+                            <div class="quarter bottom-right" id="panthers"></div>
+                        
+                        </div>
+                         <div id="logo-l">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Florida_Panthers.svg/1047px-Florida_Panthers.svg.png">
+                        </div>
+                    </div>
                 </div>
                 <!-- Winner 2 v 3   -->
                 <div class="bracket-slot eastern metropolitan round-2 team-lower">
-
+                    <div id="wrap">
+                        <div id="circle">
+                            <div class="quarter top-left"id="" ></div>
+                            <div class="quarter top-right" id="wings"></div>
+                            <div class="quarter bottom-left" id=""></div>
+                            <div class="quarter bottom-right" id=""></div>
+                        </div>
+                        <a href="http://reddit.com/u/masterhaldentwo">
+                         <div id="logo-l">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Detroit_Red_Wings_logo.svg/1280px-Detroit_Red_Wings_logo.svg.png">
+                        </div>
+                        </a>
+                    </div>
                 </div>
 
 
@@ -394,7 +500,18 @@
 
                 <!--  Winner Metro  -->
                 <div class="bracket-slot eastern metropolitan round-3">
-
+                    <div id="wrap">
+                        <div id="circle">
+                            <div class="quarter top-left"id="" ></div>
+                            <div class="quarter top-right" id="panthers"></div>
+                            <div class="quarter bottom-left" id=""></div>
+                            <div class="quarter bottom-right" id=""></div>
+                        
+                        </div>
+                         <div id="logo-l">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Florida_Panthers.svg/1047px-Florida_Panthers.svg.png">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- West   -->
