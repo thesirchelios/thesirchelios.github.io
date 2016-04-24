@@ -182,7 +182,7 @@ html {
 /* Bracket round 1 color */
 /* Caps v Flyers */
 .bracket-box.eastern.division-upper.matchup-upper.round-1 {
-	border-color: #;
+	border-color: #CF132B;
 }
 /* Tampa v Wings */
 .bracket-box.eastern.division-lower.matchup-lower.round-1 {
@@ -223,7 +223,7 @@ html {
 }
 
 .bracket-box.edu.mask {
-	border-top-color:#;
+	border-top-color:#CF132B;
 	border-bottom-color:#D1BD80;
 
 }
