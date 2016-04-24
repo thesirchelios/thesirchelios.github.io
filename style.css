@@ -194,7 +194,7 @@ html {
 }
 /* Pens v Rangers */
 .bracket-box.eastern.division-lower.matchup-upper.round-1 {
-	border-color: #;
+	border-color: #D1BD80;
 }
 
 /* Stars v Wild */
@@ -211,7 +211,7 @@ html {
 }
 /* Kings v Sharks */
 .bracket-box.western.division-lower.matchup-lower.round-1 {
-	border-color: #;
+	border-color: #05535D;
 }
 
 /* Bracket round 2 end mask and color */
@@ -224,7 +224,7 @@ html {
 
 .bracket-box.edu.mask {
 	border-top-color:#;
-	border-bottom-color:#;
+	border-bottom-color:#D1BD80;
 
 }
 
@@ -242,7 +242,7 @@ html {
 
 .bracket-box.wdl.mask {
 	border-top-color:#;
-	border-bottom-color:#;
+	border-bottom-color:#05535D;
 
 }
 
