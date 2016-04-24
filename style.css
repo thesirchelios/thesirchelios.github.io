@@ -199,7 +199,7 @@ html {
 
 /* Stars v Wild */
 .bracket-box.western.division-upper.matchup-upper.round-1 {
-	border-color: #;
+	border-color: #006A4E;
 }
 /* Blues v Hawks */
 .bracket-box.western.division-lower.matchup-upper.round-1 {
@@ -235,7 +235,7 @@ html {
 }
 
 .bracket-box.wdu.mask {
-	border-top-color:#;
+	border-top-color:#006A4E;
 	border-bottom-color:#;
 
 }
