@@ -190,7 +190,7 @@ html {
 }
 /* Florida v Isles */
 .bracket-box.eastern.division-upper.matchup-lower.round-1 {
-	border-color: #;
+	border-color: #00529B;
 }
 /* Pens v Rangers */
 .bracket-box.eastern.division-lower.matchup-upper.round-1 {
@@ -229,7 +229,7 @@ html {
 }
 
 .bracket-box.edl.mask {
-	border-top-color:#;
+	border-top-color:#00529B;
 	border-bottom-color:#013E7D;
 
 }
