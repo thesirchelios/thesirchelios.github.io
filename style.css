@@ -207,7 +207,7 @@ html {
 }
 /* Ducks v Preds */
 .bracket-box.western.division-upper.matchup-lower.round-1 {
-	border-color: #;
+	border-color: #FDBB2F;
 }
 /* Kings v Sharks */
 .bracket-box.western.division-lower.matchup-lower.round-1 {
@@ -241,7 +241,7 @@ html {
 }
 
 .bracket-box.wdl.mask {
-	border-top-color:#;
+	border-top-color:#FDBB2F;
 	border-bottom-color:#05535D;
 
 }
