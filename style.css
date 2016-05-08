@@ -246,6 +246,24 @@ html {
 
 }
 
+/* Bracket round 3 end mask and color */
+.bracket-box.mask-3 {
+	height: 35%;
+	width: 6%;
+	top: 16.25%;
+	z-index: 15;
+	border-width: 5px 0px 5px 0;
+}
+
+.bracket-box.e.mask-3 {
+	border-top-color:#;
+	border-bottom-color:#013E7D;
+}
+
+.bracket-box.w.mask-3 {
+	border-top-color:#;
+	border-bottom-color:#;
+}
 
 /*Bracket height and width*/
 
@@ -277,15 +295,15 @@ html {
 
 .bracket-box.eastern.division-upper.round-2,.edu.mask{top:7.75%;border-color:#;}
 
-.bracket-box.eastern.division-lower.round-2,.edl.mask{bottom:38.75%;border-color: #;}
+.bracket-box.eastern.division-lower.round-2,.edl.mask{bottom:38.75%;border-color: #013E7D;}
 
 
 /*Round 3*/
 .bracket-box.round-3{height:35%;top:16.25%;width:12%}
 
-.bracket-box.western.round-3{left:19%}
+.bracket-box.western.round-3,.w.mask-3{left:19%}
 
-.bracket-box.eastern.round-3{right:19%}
+.bracket-box.eastern.round-3,.e.mask-3{right:19%}
 
 
 /*Round 4*/
