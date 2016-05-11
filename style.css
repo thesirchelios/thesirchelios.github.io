@@ -256,7 +256,7 @@ html {
 }
 
 .bracket-box.e.mask-3 {
-	border-top-color:#;
+	border-top-color:#D1BD80;
 	border-bottom-color:#013E7D;
 }
 
@@ -293,7 +293,7 @@ html {
 
 .bracket-box.western.division-lower.round-2,.wdl.mask{bottom:38.75%}
 
-.bracket-box.eastern.division-upper.round-2,.edu.mask{top:7.75%;border-color:#;}
+.bracket-box.eastern.division-upper.round-2,.edu.mask{top:7.75%;border-color:#D1BD80;}
 
 .bracket-box.eastern.division-lower.round-2,.edl.mask{bottom:38.75%;border-color: #013E7D;}
 
