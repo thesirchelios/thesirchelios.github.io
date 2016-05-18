@@ -1,0 +1,136 @@
+<!-- stanleycupbracket.site -->
+<!-- This is a fan site created by MH2 -->
+<!-- Not affiliated with NHL or any of the teams. NHL and all team logos are registered trademarks of those entities. -->
+
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title> EURO 2016 </title>
+        <link rel="stylesheet" type="text/css" href="test.css" media="screen">
+        <link rel="shortcut icon" type="image/png" href="fra.png"/>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <style>
+            html {
+                font-family: 'Roboto', sans-serif;
+            }
+            table {
+                    border-collapse: collapse;
+            }
+            table td {
+                padding: 5px;
+            }
+            table tr:nth-child(odd) {
+                background-color: #cccccc;
+            }
+
+            table th {
+                background-color: #999;
+                text-align: left;
+                padding: 10px;
+            }
+          
+
+        </style>
+
+        <script>
+            //var url = "http://api.football-data.org/v1/soccerseasons/351/leagueTable";
+            var update= new Date("2016-06-10T23:00:00Z");
+                update.setUTCHours(update.getHours());
+                update.setUTCMinutes(update.getMinutes());
+                update.setUTCSeconds(update.getSeconds());
+                
+                var timeZ = update.getMonth() + " "+update.getDate()+", "+update.getFullYear()+" at "+update.getHours()+":"+update.getMinutes();
+
+                var print=update.toISOString();
+                console.log(timeZ);
+
+            //Last updated
+            $.ajax({
+                headers: { 'X-Auth-Token': '1ee4acaa3e7841a58187df8575f3849b' },
+                url: 'http://api.football-data.org/v1/soccerseasons/?season=2015',
+                dataType: 'json',
+                type: 'GET',
+            }).done(function(data) {
+                    var monthNames = ["January", "February", "March", "April", "May", "June",
+                                     "July", "August", "September", "October", "November", "December"
+                                     ];
+
+                    var t = new Date(data[4].lastUpdated);
+                    var leagueUpdate ="<h4>Updated: "+monthNames[t.getMonth()]+" "+t.getDate()+", "+ t.getFullYear()+" at "+t.getHours()+":"+t.getMinutes()+" UTC</h4>";
+                    var timeZone = t.getHours() + ':' + ('0' + t.getMinutes()).slice(-2);
+                    console.log(timeZone);
+                    document.getElementById("league").innerHTML=leagueUpdate;
+
+                    var leagueName = data[4].caption;
+                    document.getElementById("leagueName").innerHTML=leagueName;
+
+            });
+
+            //Euro teams
+            $.ajax({
+                headers: { 'X-Auth-Token': '1ee4acaa3e7841a58187df8575f3849b' },
+                url: 'http://api.football-data.org/v1/soccerseasons/424/teams',
+                dataType: 'json',
+                type: 'GET',
+            }).done(function(data) {
+                    var teams = "<ul>";
+                        $(data.teams).each(function() {
+                            teams+="<li>"+this.name+"</li>";
+                        });
+                        teams+="</li>";
+                        document.getElementById("teams").innerHTML=teams;
+
+
+            });
+
+            //Standings table
+            $.ajax({
+                  headers: { 'X-Auth-Token': '1ee4acaa3e7841a58187df8575f3849b' },
+                  url: 'http://api.football-data.org/v1/soccerseasons/398/leagueTable',
+                  dataType: 'json',
+                  type: 'GET',
+                }).done(function(data) {
+                    
+                    var bayern = data.standing[0];
+                    var bPoints = bayern.points;
+                    console.log(bPoints);
+
+                    var output="<table><tr><th>#</th><th>[ o°]</th><th>TEAM</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>P</th></tr>";
+                        /*for (var i in data.standing) {
+                            output+="<li>" + data.standing[i].position + "." + data.standing[i].teamName +"<img src='"+data.standing[i].crestURI+"' width='20px' height='20px'></img></li>";
+                        }*/
+
+                        $(data.standing).each(function() {
+                            output+="<tr><td>" + this.position + "</td>";
+                            output+="<td><img src='"+this.crestURI+"' width='30px' height='30px'></img></td>";
+                            output+="<td>" +this.teamName+"</td>";
+                            output+="<td>"+this.playedGames+ "</td><td>"+this.wins+"</td><td>"+this.draws+"</td><td>"+this.losses+"</td><td>"+this.goalDifference+"</td><td><b>"+this.points+"</b></td></tr>";
+
+                        });
+
+                    output+="</table>";
+                    document.getElementById("foo").innerHTML=output;
+
+                    
+
+                    //console.log(data);
+                });
+
+        </script>
+    </head>
+
+<body>
+<div id="now"></div>
+<h1 id="leagueName"></h1>
+<div id="foo"></div>
+<br>
+<div id="league"></div>
+
+
+                        
+</body>
+</html>
+
