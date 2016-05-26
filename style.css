@@ -49,6 +49,16 @@ html {
 	z-index:17;
 }
 
+.bracket-slot-cup{
+	width:6%;
+	position:absolute;
+	padding-top:6%;
+	background-color:#999;
+	border-radius:50%;
+	z-index:17;
+}
+
+
 /* Winner */
 .bracket-slot-winner{
 	width:8%;
@@ -98,9 +108,9 @@ html {
 .bracket-slot.western.round-3{left:23%}
 
 
-.bracket-slot.eastern.round-4{right:37%}
+.bracket-slot-cup.eastern.round-4{right:37%}
 
-.bracket-slot.western.round-4{left:37%}
+.bracket-slot-cup.western.round-4{left:37%}
 
 
 .bracket-slot.round-4-winner{left:48%}
@@ -148,7 +158,7 @@ html {
 
 
 
-.bracket-slot.round-4{top:30%}
+.bracket-slot-cup.round-4{top:29%}
 
 .bracket-slot.round-4-winner{top:46%}
 
@@ -301,7 +311,7 @@ html {
 /*Round 3*/
 .bracket-box.round-3{height:35%;top:16.25%;width:12%}
 
-.bracket-box.western.round-3,.w.mask-3{left:19%}
+.bracket-box.western.round-3,.w.mask-3{left:19%;border-color: #05535D}
 
 .bracket-box.eastern.round-3,.e.mask-3{right:19%}
 
@@ -309,7 +319,7 @@ html {
 /*Round 4*/
 .bracket-box.round-4{height:0;width:6%;top:32.5%}
 
-.bracket-box.western.round-4{left:31%}
+.bracket-box.western.round-4{left:31%;border-color: #05535D}
 
 .bracket-box.eastern.round-4{right:31%}
 
