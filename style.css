@@ -313,7 +313,7 @@ html {
 
 .bracket-box.western.round-3,.w.mask-3{left:19%;border-color: #05535D}
 
-.bracket-box.eastern.round-3,.e.mask-3{right:19%}
+.bracket-box.eastern.round-3,.e.mask-3{right:19%;border-color:#D1BD80;}
 
 
 /*Round 4*/
@@ -321,7 +321,7 @@ html {
 
 .bracket-box.western.round-4{left:31%;border-color: #05535D}
 
-.bracket-box.eastern.round-4{right:31%}
+.bracket-box.eastern.round-4{right:31%;border-color:#D1BD80;}
 
 
 /*Team logo circle*/
