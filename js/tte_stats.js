@@ -37,9 +37,9 @@ $(document).ready(function() {
     var fttPercent = ((fttCount/(epiOrg.length-missed))*100).toFixed(1)+'%';
     var missedPercent = ((missed/epiOrg.length)*100).toFixed(1)+'%';
 
-    document.getElementById("missed").innerHTML='Episodes missed: '+ missed +' ('+missedPercent+')';
+    document.getElementById("missed").innerHTML='<i class="icon-right"></i>Episodes missed: '+ missed +' ('+missedPercent+')';
     document.getElementById("missedInt").innerHTML=missed+' ('+missedPercent+')';
-    document.getElementById("ftt").innerHTML='Episodes first to talk: '+ fttCount +' ('+fttPercent+')';
+    document.getElementById("ftt").innerHTML='<i class="icon-right"></i>Episodes first to talk: '+ fttCount +' ('+fttPercent+')';
     document.getElementById("fttInt").innerHTML=fttCount+' episodes, or '+fttPercent;
 
 
@@ -60,9 +60,9 @@ $(document).ready(function() {
        }
      }
 
-     var longestTTE = 'Longest: '+ moment.duration(Math.max.apply(null, time), 's').format('mm:ss', { trim: false }) +' (#'+longestEpi+')';
+     var longestTTE = '<i class="icon-right"></i>Longest: '+ moment.duration(Math.max.apply(null, time), 's').format('mm:ss', { trim: false }) +' (#'+longestEpi+')';
      var longestInt = (moment.duration(Math.max.apply(null, time), 's').format('mm:ss', { trim: false })).split(':');
-     var shortestTTE = 'Shortest: '+ moment.duration(Math.min.apply(null, time), 's').format('mm:ss', { trim: false }) +' (#'+shortestEpi+')';
+     var shortestTTE = '<i class="icon-right"></i>Shortest: '+ moment.duration(Math.min.apply(null, time), 's').format('mm:ss', { trim: false }) +' (#'+shortestEpi+')';
      var shortestInt = moment.duration(Math.min.apply(null, time), 's').format('mm:ss', { trim: false });
 
      // NOTE: If longest is increased to 10+ minutes, update to remove substring!!!!!
