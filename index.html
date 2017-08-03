@@ -1,5 +1,137 @@
+<!doctype html>
 <html>
+  <head>
+    <title>Time To Evan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="masterhaldentwo" />
+    <meta name="description" content="Figuring out the elusive Time To Evan (TTE)" />
+    <meta name="keywords"  content="" />
+
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16"/>
+    <link href="https://fonts.googleapis.com/css?family=Secular+One|Open+Sans" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./fontello/css/fontello.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/1.3.0/moment-duration-format.min.js"></script>
+    <script src="./js/charts.min.js"></script>
+    <script src="./js/tte_stats.js"></script>
+    <script src="./js/Chart.PieceLabel.min.js"></script>
+  </head>
+
 <body>
-  <h1>TTE</h1>
+  <input id="burger" type="checkbox" />
+  <label for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+  <!-- NOTE: bg-div is used to add a 0.8 transparent black background when the nav is active.
+             hidden is used to mask the checkbox behind the burger menu -->
+  <div class="bg-div"></div>
+  <div id="hidden"></div>
+  <nav>
+    <div class="pineapple"><img src="http://i.imgur.com/QqJAdtI.png"></img></div><hr>
+    <h2><a href="podcast.html">Podcast Stats</a></h2>
+    <h6><i class="icon-code"></i> by masterhaldentwo</h6>
+  </nav>
+
+  <div class="container">
+    <div class="row logo">
+      <div class="col-md-12 text-center">
+        <img class="img-fluid" src="./img/logo5.png"></img>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <canvas id="tteChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="row" id="facts">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="info-title">Facts</h1>
+            <div id="toggle">
+              <span id="hidden-i"><i class="icon-list-bullet"></i></span>
+              <span id="showing-i"><i class="icon-chart-bar"></i></span>
+            </div>
+          </div>
+          <div class="card-block">
+            <i class="icon-angle"></i>On average it takes Evan <span id="meanInt"></span> seconds to speak during an episode.<hr>
+            <i class="icon-angle"></i>The most common time for Evan to first speak is <span id="modeInt"></span> seconds into the episode.<hr>
+            <i class="icon-angle"></i>The longest it has taken Evan to say something is <span id="longestInt"></span>. The shortest is <span id="shortestInt"></span>.<hr>
+            <i class="icon-angle"></i>Evan has been the first to speak in <span id="fttInt"></span> of the episodes he's been in. He's missed <span id="missedInt"></span> episodes so far.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="stats">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="info-title">Stats</h1>
+            <div id="toggle">
+              <span id="showing-i"><i class="icon-list-bullet"></i></span>
+              <span id="hidden-i"><i class="icon-chart-bar"></i></span>
+            </div>
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-md-3">
+                <h4 id="mean"></h4><hr>
+                <h4 id="median"></h4><hr>
+                <h4 id="mode"></h4><hr>
+              </div>
+              <div class="col-md-4">
+                <h4 id="longest"></h4><hr>
+                <h4 id="shortest"></h4><hr>
+              </div>
+              <div class="col-md-5">
+                <h4 id="missed"></h4><hr>
+                <h4 id="ftt"></h3><hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<script>
+
+$('#toggle > span').click(function() {
+    var ix = $(this).index();
+
+    $('#facts').toggle( ix === 0 );
+    $('#stats').toggle( ix === 1 );
+    $('#hidden-i').toggle(ix === 1);
+    $('#showing-i').toggle(ix === 0);
+});
+
+$(document).ready(function() {
+  $("#facts > .col-12 > .card > .card-block").slideDown(1500);
+});
+
+$('#facts > .col-12 > .card > .card-header > #toggle > #showing-i').click(function() {
+  $("#facts > .col-12 > .card > .card-block").slideUp();
+  $("#stats > .col-12 > .card > .card-block").slideDown(1000);
+});
+
+$('#stats > .col-12 > .card > .card-header > #toggle > #showing-i').click(function() {
+  $("#stats > .col-12 > .card > .card-block").slideUp();
+  $("#facts > .col-12 > .card > .card-block").slideDown(1000);
+});
+
+</script>
 </html>

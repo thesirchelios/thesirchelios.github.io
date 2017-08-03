@@ -1,0 +1,8 @@
+
+.icon-right:before { content: '\e800'; } /* '' */
+.icon-info-circled:before { content: '\e801'; } /* '' */
+.icon-clock:before { content: '\e803'; } /* '' */
+.icon-chart-bar:before { content: '\e804'; } /* '' */
+.icon-list-bullet:before { content: '\f0ca'; } /* '' */
+.icon-angle:before { content: '\f101'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */

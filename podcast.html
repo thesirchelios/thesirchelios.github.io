@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Podcast Stats</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="masterhaldentwo" />
+    <meta name="description" content="Figuring out the elusive Time To Evan (TTE)" />
+    <meta name="keywords"  content="" />
+
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16"/>
+    <link href="https://fonts.googleapis.com/css?family=Secular+One|Open+Sans" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./fontello/css/fontello.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/1.3.0/moment-duration-format.min.js"></script>
+    <script src="./js/charts.min.js"></script>
+    <script src="./js/tte_stats.js"></script>
+    <script src="./js/Chart.PieceLabel.min.js"></script>
+  </head>
+  </head>
+
+<body>
+  <input id="burger" type="checkbox" />
+
+  <label for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+  <div class="bg-div"></div>
+  <div id="hidden"></div>
+  <nav>
+    <div class="pineapple"><img src="http://i.imgur.com/QqJAdtI.png"></img></div><hr>
+    <h2><a href="index.html">Time To Evan</a></h2>
+    <h6><i class="icon-code"></i> by masterhaldentwo</h6>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="display-3">Winged Wheel Podcast Stats</h1><hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4>Episode length</h4>
+      </div>
+      <div class="col-12">
+        <canvas id="wwpDurationChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4>Number of episodes per month</h4>
+      </div>
+      <div class="col-12">
+        <canvas id="wwpMonthsChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h4>Number of episodes published per day of the week</h4>
+      </div>
+      <div class="col-12">
+        <br>
+        <canvas id="wwpDayChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+$.ajax({
+  url: "all.json",
+  dataType: "json",
+  success: function(data) {
+    var base = data.rss.channel.item;
+    //console.log(base);
+
+  }
+});
+
+$('#toggle > span').click(function() {
+    var ix = $(this).index();
+
+    $('#left').toggle( ix === 0 );
+    $('#right').toggle( ix === 1 );
+    $('#one').toggle(ix === 1);
+    $('#two').toggle(ix === 0);
+});
+</script>
+</html>
