@@ -1388,5 +1388,15 @@
       "FTT":"",
       "Duration":"02:06:22",
       "Day":"Mon"
+   },
+   {
+      "Episode":140,
+      "Name":"Frk Yeah!",
+      "Month":"October",
+      "Year":2017,
+      "TTE":"NaN",
+      "FTT":"",
+      "Duration":"1:24:40",
+      "Day":"Mon"
    }
 ]
