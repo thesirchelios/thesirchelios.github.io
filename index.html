@@ -1,547 +1,137 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-    <title>NHL Playoff Bracket</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <head>
+    <title>Time To Evan</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="masterhaldentwo" />
+    <meta name="description" content="Figuring out the elusive Time To Evan (TTE)" />
+    <meta name="keywords"  content="" />
 
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16"/>
+    <link href="https://fonts.googleapis.com/css?family=Secular+One|Open+Sans" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./fontello/css/fontello.css" rel="stylesheet">
+    <link href="./css/main.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-duration-format/1.3.0/moment-duration-format.min.js"></script>
+    <script src="./js/charts.min.js"></script>
+    <script src="./js/tte_stats.js"></script>
+    <script src="./js/Chart.PieceLabel.min.js"></script>
   </head>
 
 <body>
-	<div id="page-container">
-
-		<!-- Begin Western Conference -->
-		<div id="west" class="pc-pane">
-
-				<!-- Central division  -->
-				<div id="group-left">
-
-					<!-- Round 1 matchup 1 vs W2 -->
-						<!-- Seed 1: Dallas -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="stars"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Dallas_Stars_2013_crest.svg/1235px-Dallas_Stars_2013_crest.svg.png">
-							</div>
-						</div>
-
-						<!-- Seed W2: Minnesota -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" ></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Minnesota_Wild.svg/1280px-Minnesota_Wild.svg.png">
-							</div>
-						</div>
-
-						<!-- Bracket 1 vs W2 -->
-						<div id="small-bracket-l"></div>
-						<div id="sb-end-l"></div>
-
-
-						<!-- Winner of round 1 -->
-						<div id="all-l" class="top-l r2-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" id="stars"></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Dallas_Stars_2013_crest.svg/1235px-Dallas_Stars_2013_crest.svg.png">
-							</div>
-						</div>
-
-						<!-- Winner round 2 -->
-						<div id="all-l" class="top-l r3-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left" id="blues"></div>
-							    <div class="quarter top-right" id="blues"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right"></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/StLouis_Blues.svg/1280px-StLouis_Blues.svg.png">
-							</div>
-						</div>
-
-
-				</div>
-
-
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<!-- Round 1 matchup 2 vs 3 -->
-				<div id="group-left">
-
-					<!-- Seed 2: St Louis -->
-					<div id="all-l" class="top-l">
-						<div id="circle-container-l">
-					  		<div class="quarter top-left" id="blues"></div>
-						    <div class="quarter top-right" id="blues"></div>
-						    <div class="quarter bottom-left" id="blues"></div>
-						    <div class="quarter bottom-right" id="blues"></div>
-						</div>
-						<div id="logo-l">
-							<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/StLouis_Blues.svg/1280px-StLouis_Blues.svg.png">
-						</div>
-					</div>
-
-					<!-- Central seed 3: Chicago -->
-					<div id="all-l" class="top-l">
-						<div id="circle-container-l">
-					  		<div class="quarter top-left"></div>
-						    <div class="quarter top-right" id="hawks"></div>
-						    <div class="quarter bottom-left"></div>
-						    <div class="quarter bottom-right" ></div>
-						</div>
-						<div id="logo-l">
-							<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/ChicagoBlackhawksLogo.svg/1141px-ChicagoBlackhawksLogo.svg.png">
-						</div>
-					</div>
-
-					<!-- Bracket 2 vs 3 -->
-						<div id="small-bracket-l"></div>
-						<div id="sb-end-l"></div>
-
-					<!-- Winner round 1 between 2 vs 3 -->
-					<div id="all-l" class="top-l r2-l">
-						<div id="circle-container-l">
-					  		<div class="quarter top-left" ></div>
-						    <div class="quarter top-right" id="blues"></div>
-						    <div class="quarter bottom-left"></div>
-						    <div class="quarter bottom-right"></div>
-						</div>
-						<div id="logo-l">
-							<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/StLouis_Blues.svg/1280px-StLouis_Blues.svg.png">
-						</div>
-					</div>
-
-					<!-- Bracket Central final -->
-					<div id="medium-bracket-l"></div>
-					<div id="mb-end-l"></div>
-				</div>
-
-
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-
-				<!-- Pacific division -->
-				<div id="group-left">
-
-					<!-- Matchup 1 vs W1 -->
-						<!-- Pacific seed 1 -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="ducks"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Anaheim_Ducks.svg/1280px-Anaheim_Ducks.svg.png">
-							</div>
-						</div>
-
-						<!-- Wild card 1 -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="predators"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Nashville_Predators_Logo_(2011).svg/1280px-Nashville_Predators_Logo_(2011).svg.png">
-							</div>
-						</div>
-
-						<!-- 1 vs W1 bracket -->
-						<div id="small-bracket-l"></div>
-						<div id="sb-end-l"></div>
-
-						<!-- Winner 1 vs W1 -->
-						<div id="all-l" class="top-l r2-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="ducks"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Anaheim_Ducks.svg/1280px-Anaheim_Ducks.svg.png">
-							</div>
-						</div>
-
-						<!-- Winner round 3 -->
-						<div id="all-l" class="top-l r3-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="kings"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Anaheim_Ducks.svg/1280px-Anaheim_Ducks.svg.png">
-							</div>
-						</div>
-
-						<!-- Winner round 4 -->
-						<div id="all-l" class="top-l r4-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left" id="kings"></div>
-							    <div class="quarter bottom-right"></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Anaheim_Ducks.svg/1280px-Anaheim_Ducks.svg.png">
-							</div>
-						</div>
-				</div>
-
-
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<!-- Pacific 2 vs 3 -->
-				<div id="group-left">
-						<!-- Seed 2 -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Los_Angeles_Kings_Logo_(2011).svg/855px-Los_Angeles_Kings_Logo_(2011).svg.png">
-							</div>
-						</div>
-
-						<!-- Seed 3 -->
-						<div id="all-l" class="top-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="sharks"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/37/SanJoseSharksLogo.svg/1258px-SanJoseSharksLogo.svg.png">
-							</div>
-						</div>
-
-						<!-- Bracket 2 vs 3 -->
-						<div id="small-bracket-l"></div>
-						<div id="sb-end-l"></div>
-
-						<!-- Winner 2 vs 3 -->
-						<div id="all-l" class="top-l r2-l">
-							<div id="circle-container-l">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-l">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Los_Angeles_Kings_Logo_(2011).svg/855px-Los_Angeles_Kings_Logo_(2011).svg.png">
-							</div>
-						</div>
-
-						<div id="medium-bracket-l"></div>
-						<div id="mb-end-l"></div>
-
-						<div id="large-bracket-l"></div>
-						<div id="lb-end-l"></div>
-				</div>
-			
-		</div>
-		<!-- End Western conference -->
-
-
-		<div id="middle">
-			<img src="file:///B:/websites/playoffs/cup_logo.png"
-
-			<div id="champion">
-				<img src="file:///B:/websites/playoffs/champs.png"
-			</div>
-		</div>
-
-		<!-- Begin Eastern conference -->
-		<div id="east" class="pc-pane">
-
-				<!-- Mero division -->
-				<div id="pair-r">
-					
-					<!-- Matchup 1 vs W2 -->
-						<!-- Seed 1: Washington -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left" id="caps"></div>
-							    <div class="quarter top-right" id="caps"></div>
-							    <div class="quarter bottom-left" id="caps"></div>
-							    <div class="quarter bottom-right" id="caps" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Washington_Capitals.svg/1280px-Washington_Capitals.svg.png">
-							</div>
-						</div>
-
-						<!-- Seed W2: Philadelphia -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Philadelphia_Flyers.svg/200px-Philadelphia_Flyers.svg.png">
-							</div>
-						</div>
-
-						<!-- Bracket 1 vs W2 -->
-						<div id="small-bracket-r"></div>
-						<div id="sb-end-r"></div>
-
-						<!-- Winner 1 vs W2 -->
-						<div id="all-r" class="top-r r2-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left" ></div>
-							    <div class="quarter top-right" ></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" id="caps" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Washington_Capitals.svg/1280px-Washington_Capitals.svg.png">
-							</div>
-						</div>
-				</div>
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<div id="pair-r">
-					<!-- Metro 2 vs 3 -->
-						<!-- Seed 2: Pittsburgh -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="pens"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Pittsburgh_Penguins_logo.svg">
-							</div>
-						</div>
-
-						<!-- Seed 3: NY Rangers -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/2000px-New_York_Rangers.svg.png">
-							</div>
-						</div>
-
-						<!-- Bracket 2 vs 3 -->
-						<div id="small-bracket-r"></div>
-						<div id="sb-end-r"></div>
-
-						<!-- Winner 2 vs 3 -->
-						<div id="all-r" class="top-r r2-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="pens"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Pittsburgh_Penguins_logo.svg">
-							</div>
-						</div>
-
-						<div id="medium-bracket-r"></div>
-						<div id="mb-end-r"></div>
-				</div>
-
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<br>
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<br>
-
-				<!-- Atlantic division -->
-				<div id="pair-r">
-					<!-- Matchup 1 vs W1 -->
-
-						<!-- Seed 1: Florida -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="panthers"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Florida_Panthers.svg/1047px-Florida_Panthers.svg.png">
-							</div>
-						</div>
-
-						<!-- Seed W1: NY Islanders -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="islanders"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="file:///B:/websites/playoffs/isles.png">
-							</div>
-						</div>
-
-						<!-- Bracket 1 vs W1 -->
-						<div id="small-bracket-r"></div>
-						<div id="sb-end-r"></div>
-
-						<!-- Winner 1 vs W1 -->
-						<div id="all-r" class="top-r r2-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="panthers"></div>
-							    <div class="quarter bottom-left" id="panthers"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Florida_Panthers.svg/1047px-Florida_Panthers.svg.png">
-							</div>
-						</div>
-				</div>
-
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-
-				<div id="pair-r">
-					<!-- Matchup 2 vs 3 -->
-
-						<!-- Seed 2: Tampa Bay -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right" id="tampa"></div>
-							    <div class="quarter bottom-left" ></div>
-							    <div class="quarter bottom-right" id="tampa"></div>
-							</div>
-							<div id="logo-r">
-								<img src="file:///B:/websites/playoffs/tampa.png">
-							</div>
-						</div>
-
-						<!-- Seed 3: Detroit -->
-						<div id="all-r" class="top-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left"></div>
-							    <div class="quarter bottom-right"></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Detroit_Red_Wings_logo.svg/1280px-Detroit_Red_Wings_logo.svg.png">
-							</div>
-						</div>
-
-						<!-- Bracket 2 vs 3 -->
-						<div id="small-bracket-r"></div>
-						<div id="sb-end-r"></div>
-
-						<!-- Winner 2 vs 3 -->
-						<div id="all-r" class="top-r r2-r">
-							<div id="circle-container-r">
-						  		<div class="quarter top-left"></div>
-							    <div class="quarter top-right"></div>
-							    <div class="quarter bottom-left" id="wings"></div>
-							    <div class="quarter bottom-right" ></div>
-							</div>
-							<div id="logo-r">
-								<img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Detroit_Red_Wings_logo.svg/1280px-Detroit_Red_Wings_logo.svg.png">
-							</div>
-						</div>
-
-						<div id="medium-bracket-r"></div>
-						<div id="mb-end-r"></div>
-
-						<div id="large-bracket-r"></div>
-						<div id="lb-end-r"></div>
-				</div>
-		</div>
-
-
-	</div>
-
+  <input id="burger" type="checkbox" />
+  <label for="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+  <!-- NOTE: bg-div is used to add a 0.8 transparent black background when the nav is active.
+             hidden is used to mask the checkbox behind the burger menu -->
+  <div class="bg-div"></div>
+  <div id="hidden"></div>
+  <nav>
+    <a href="http://twitter.com/wingedwheelpod" target="_blank"><div class="pineapple"><img src="./img/express.png" alt="pineapple"></div></a><hr>
+    <h2><a href="podcast.html">Podcast Stats</a></h2>
+    <a href="http://hasrileysheahanscored.info" target="_blank"><h6><i class="icon-code"></i> by masterhaldentwo</h6></a>
+  </nav>
+
+  <div class="container">
+    <div class="row logo">
+      <div class="col-md-12 text-center">
+        <img class="img-fluid" src="./img/logo5.png" alt="time to evan logo">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <canvas id="tteChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="row" id="facts">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="info-title">Facts</h1>
+            <div id="toggle">
+              <span id="hidden-i"><i class="icon-list-bullet"></i></span>
+              <span id="showing-i"><i class="icon-chart-bar"></i></span>
+            </div>
+          </div>
+          <div class="card-block">
+            <i class="icon-angle"></i>On average it takes Evan <span id="meanInt"></span> seconds to speak during an episode.<hr>
+            <i class="icon-angle"></i>The most common time for Evan to first speak is <span id="modeInt"></span> seconds into the episode.<hr>
+            <i class="icon-angle"></i>The longest it has taken Evan to say something is <span id="longestInt"></span>. The shortest is <span id="shortestInt"></span>.<hr>
+            <i class="icon-angle"></i>Evan has been the first to speak in <span id="fttInt"></span> of the episodes he's been in. He's missed <span id="missedInt"></span> episodes so far.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="stats">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="info-title">Stats</h1>
+            <div id="toggle">
+              <span id="showing-i"><i class="icon-list-bullet"></i></span>
+              <span id="hidden-i"><i class="icon-chart-bar"></i></span>
+            </div>
+          </div>
+          <div class="card-block">
+            <div class="row">
+              <div class="col-md-3">
+                <h4 id="mean"></h4><hr>
+                <h4 id="median"></h4><hr>
+                <h4 id="mode"></h4><hr>
+              </div>
+              <div class="col-md-4">
+                <h4 id="longest"></h4><hr>
+                <h4 id="shortest"></h4><hr>
+              </div>
+              <div class="col-md-5">
+                <h4 id="missed"></h4><hr>
+                <h4 id="ftt"></h4><hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-</html>
+<script>
 
+$('#toggle > span').click(function() {
+    var ix = $(this).index();
+
+    $('#facts').toggle( ix === 0 );
+    $('#stats').toggle( ix === 1 );
+    $('#hidden-i').toggle(ix === 1);
+    $('#showing-i').toggle(ix === 0);
+});
+
+$(document).ready(function() {
+  $("#facts > .col-12 > .card > .card-block").slideDown(1500);
+});
+
+$('#facts > .col-12 > .card > .card-header > #toggle > #showing-i').click(function() {
+  $("#facts > .col-12 > .card > .card-block").slideUp();
+  $("#stats > .col-12 > .card > .card-block").slideDown(1000);
+});
+
+$('#stats > .col-12 > .card > .card-header > #toggle > #showing-i').click(function() {
+  $("#stats > .col-12 > .card > .card-block").slideUp();
+  $("#facts > .col-12 > .card > .card-block").slideDown(1000);
+});
+
+</script>
+</html>
